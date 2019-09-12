@@ -1,0 +1,23 @@
+# Python ignore
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+
+# idea ignore
+.idea/
+/idea/
+
+# eclipse ignore
+.classpath
+.settings
+.project
+
+# system ignore
+.DS_Store
+Thumbs.db
+
+# Windows ignore
+Thumbs.db
+ehthumbs.db
+Desktop.ini
