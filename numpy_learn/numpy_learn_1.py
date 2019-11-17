@@ -10,11 +10,11 @@
 # str_hw2 = "%s %s %d" % (str_h, str_w, 2019)
 # print(str_hw2)
 # print("========== Python Strings Base end ==========\n")
-#
+
 # print("\n========== Python Strings Common Operation begin ==========")
 # s = "flouis"
 # ss = s.capitalize()     # 首字母大写
-# print("%s: %s" % ("s.capitalize()=ss", ss))
+# print("%s: %s" % ("s.capitalize()", ss))
 # print("%s: %s" % ("s.upper()", s.upper()))
 # print("ss.lower():", ss.lower())
 # print("hello".replace("l", "(ell)"))    # he(ell)(ell)o
@@ -24,7 +24,7 @@
 print("集合是长度可变的数组")
 
 # print("\n========== Python Containers(list) begin ==========")
-# print("容器一：列表，是不同类型元素的有序集合")
+# print("容器一：列表，是可容纳不同类型元素的有序集合")
 # num_list = list(range(5))
 # print(num_list)
 # num_list.append("foo")
@@ -56,7 +56,7 @@ print("集合是长度可变的数组")
 # print(d["name"])        # Flouis  索引一
 # print(d.get("name"))    # Flouis  索引二
 # print("建议使用索引二，因为索引一当字典中没有该键值对时，会报错，索引二相当于是先进行in判断，再取值，不存在时默认返回None")
-# print(d.get("xxx", "xyz"))
+# print(d.get("xxx"))
 # # print(d["xxx"])     # KeyError: 'xxx'
 #
 # d["height"] = 180   # set an entry in a dict
@@ -64,7 +64,7 @@ print("集合是长度可变的数组")
 # del d["age"]        # remove an element from a dict
 # print(d)
 #
-# print("字典循环--dict loop")
+# print("\n字典循环--dict loop")
 # for v in d:
 #     print("%s: %s" % (v, d[v]), end=" ")
 # print()
@@ -83,7 +83,7 @@ print("集合是长度可变的数组")
 # print("========== Python Containers(dict) end ==========\n")
 
 # print("\n========== Python Containers(set) begin ==========")
-# print("容器三：集合，是不同元素(消除重复元素)的无序集合")
+# print("容器三：集合，是可容纳不同元素(消除重复元素)的无序集合")
 # animals = {"cat", "dog", "fish", "bird", "cat"}
 # print("%s: %s" % (type(animals), animals))
 # print("%s: %d" % ("len(animals)", len(animals)))
@@ -122,7 +122,7 @@ print("集合是长度可变的数组")
 # print("========== Python Containers(tuple) end ==========\n")
 
 
-print("\n========== Python Class begin ==========")
+# print("\n========== Python Class begin ==========")
 
 
 class Greeter(object):
@@ -150,4 +150,4 @@ print(greeter)
 greeter.greet()
 greeter.greet(True)
 
-print("========== Python Class end ==========\n")
+# print("========== Python Class end ==========\n")
