@@ -1,8 +1,9 @@
+# coding: utf-8
 import numpy as np
 
 print(np.__version__)
 
-# numpy 最核心的类型：ndarray
+''' numpy 最核心的类型：ndarray，本节学习numpy数组的初始化/创建 '''
 
 # 一维数组
 # a = np.array([1, 2, 3, 4])
