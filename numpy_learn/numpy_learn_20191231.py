@@ -92,3 +92,15 @@ x = np.arange(4).reshape((2, 2), order='C')
 print("x:%s" % x)
 y = np.arange(4).reshape((2, 2), order='F')
 print("y:%s" % y)
+
+# Numpy提供了许多通用函数，这些通用函数相当于Python通用函数的矢量版 —— 消除循环
+x = np.array([-1, -2.3, 3.6, 5, -9])
+print(np.abs(x))    # np.abs(ndarray) 取绝对值
+print(np.modf(x))   # np.modf(ndarray) 返回数组小数部分元组和整数部分元组
+
+print('%.1f' % x.sum())
+print('%.2f' % x.mean())     # ndarray.mean()求平均值
+print("max: %s, min: %s" % (x.max(), x.min()))
+print("max_index: %s, min_index: %s" % (x.argmax(), x.argmin()))    # 返回最大值/最小值所在的索引下标
+print("标准差: %.2f, 方差: %.2f" % (x.std(), x.var()))
+print("累计和: %s, 累计积: %s" % (x.cumsum(), x.cumprod()))
