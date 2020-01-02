@@ -81,7 +81,7 @@ print(f)
 f = f.flatten()
 print(f)
 
-# 【说明】：存储顺序C/F，C代表C语言，F代表Fortune语言，C按照行优先进行存储，F按照列优先存储
+# 【说明】：存储顺序C/F，C代表C语言，F代表Fortran语言，C按照行优先进行存储，F按照列优先存储
 # 构建数组时，会首先根据存储顺序进行扁平化，然后根据存储顺序进行填充
 x = np.array([[0, 1], [2, 3]], order='C')
 print("x:%s" % x)
