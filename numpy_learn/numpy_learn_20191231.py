@@ -5,26 +5,26 @@ print(np.__version__)
 
 ''' 本节学习 ndarray 相关属性与操作 '''
 
-# ndarray.ndim 属性：返回维度，1就表示一维数组，2就表示二维数组
+# np.ndim(ndarray)/ndarray.ndim属性：返回维度，1就表示一维数组，2就表示二维数组
 a = np.array([1, 2, 3])
 print(a.ndim)
 a = np.array([[1, 2, 3], [4, 5, 6]])
 print(a.ndim)
 
-# ndarray.shape 属性：返回数组有几行有几列
+# np.shape(ndarray)/ndarray.shape属性：返回数组有几行有几列
 print(a.shape)  # (2, 3)表示二行三列
 a = np.array([[1, 2], [3, 4, 5]])
 print(a.shape)  # (2,)表示二行，因为列不固定，所以列的数量没有显示
 
 a = np.array([[1, 2, 3], [4., 5, 6]])
-# ndarray.dtype 属性：返回数组元素类型
+# ndarray.dtype属性：返回数组元素类型
 print(a.dtype)
-# ndarray.size 属性：返回数组元素总个数
+# np.size(ndarray)/ndarray.size属性：返回数组元素总个数
 print(a.size)
-# ndarray.itemsize 属性：返回一个数组元素占用几个字节(1Byte 字节 = 8Bit 二进制/位)
+# ndarray.itemsize属性：返回一个数组元素占用几个字节(1Byte 字节 = 8Bit 二进制/位)
 print(a.itemsize)
 
-# ndarray.reshape()方法改变数组形状
+# ndarray.reshape(shape_tuple)/np.reshape(ndarray, shape_tuple)方法改变数组形状
 b = np.arange(24)
 print(type(b))
 b = np.reshape(b, (3, 8))  # 表示转化成一个三行八列的二维数组
