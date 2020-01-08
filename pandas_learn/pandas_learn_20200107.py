@@ -51,6 +51,7 @@ print(res)
 
 
 # 数据写入
+"""
 # to_csv()常用参数：
 # sep：指定分隔符，默认使用,
 # header：是否写入标题行，默认为True。这个参数跟之前read_csv()中的header类型不同，这里是bool类型，read_csv是一个整数类型
@@ -60,10 +61,10 @@ print(res)
 df = pd.DataFrame([[1, 2, 3], [4, 5, 6], [9, np.NaN, 0]])
 df.to_csv("../resource/demo.csv", sep=",", header=False, na_rep="空值", index=False, columns=[0, 2])
 # df.to_csv("../resource/demo.csv", index_label='i')
+"""
 
-
-
-
+# 流概念：从流的操作单位，流可以分为字节流和字符流，字节流将数据以字节(byte)形式进行操作，字符流将数据以字符(text)形式进行操作。
+# 从流的流动方向，流可以分为输入流和输出流：输入流是数据读入(到内存)，输出流是数据写入(到文件/硬盘...)
 
 
 
