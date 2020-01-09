@@ -64,12 +64,22 @@ df.to_csv("../resource/demo.csv", sep=",", header=False, na_rep="空值", index=
 """
 
 # 流概念：从流的操作单位，流可以分为字节流和字符流，字节流将数据以字节(byte)形式进行操作，字符流将数据以字符(text)形式进行操作。
-# 从流的流动方向，流可以分为输入流和输出流：输入流是数据读入(到内存)，输出流是数据写入(到文件/硬盘...)
+# 从流的流动方向，流可以分为输入流和输出流(参照物为内存)：输入流是读操作--数据读入(到内存)，输出流是写操作--数据写入(到文件/硬盘...)
+# 平时说的IO操作指的就是读写操作，I表示InputStream(输入流-读操作)，OutputStream(输出流-写操作)
 
+# 写入数据缓冲区——缓冲区作用：减少IO操作，加快数据读写
+from io import StringIO
 
-
-
-
+# StringIO等同与Java中的StringBuffer，即字符缓冲区，在Python中和FileIO统称为“类文件对象”
+# StringIO将数据以字符形式写入缓冲区，FileIO将数据以二进制形式写入缓冲区
+sio = StringIO()
+df = pd.DataFrame([[1, 2, 3], [4, 5, 6], [9, np.NaN, 0]])
+df.to_csv(path_or_buf=sio, sep=",", header=False, na_rep="空值", index=False)
+# res = sio.getvalue()
+# 调整指针：因为写入缓冲区后，缓冲区的指针会指向最后一个数据，那么再使用缓冲区进行读取，指针指向最后一个数据之后，因此不重置指针那么将会读出空数据
+sio.seek(0)
+res = sio.read()
+print(res)
 
 
 
