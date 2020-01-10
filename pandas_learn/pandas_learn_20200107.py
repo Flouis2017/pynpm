@@ -70,8 +70,8 @@ df.to_csv("../resource/demo.csv", sep=",", header=False, na_rep="空值", index=
 # 写入数据缓冲区——缓冲区作用：减少IO操作，加快数据读写
 from io import StringIO
 
-# StringIO等同与Java中的StringBuffer，即字符缓冲区，在Python中和FileIO统称为“类文件对象”
-# StringIO将数据以字符形式写入缓冲区，FileIO将数据以二进制形式写入缓冲区
+# StringIO等同与Java中的StringBuffer，即字符缓冲区，在Python中和BytesIO统称为“类文件对象”
+# StringIO将数据以字符形式写入缓冲区，BytesIO将数据以二进制形式写入缓冲区
 sio = StringIO()
 df = pd.DataFrame([[1, 2, 3], [4, 5, 6], [9, np.NaN, 0]])
 df.to_csv(path_or_buf=sio, sep=",", header=False, na_rep="空值", index=False)
