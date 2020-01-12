@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 mpl.rcParams['font.family'] = "SimHei"
 mpl.rcParams['axes.unicode_minus'] = False  # 负号使用默认字体
 
-# 绘制线图——matplotlib.pyplot模块
+""" 绘制线图(折线图/曲线图等)——matplotlib.pyplot.plot模块，线图适用场景：数据变化趋势 """
 
-# 如果只有一个点，无法显示，需要增加一个marker
+# 如果只有一个点，则无法显示，需要增加一个marker
 # plt.plot([10], marker="o")
 
 """
