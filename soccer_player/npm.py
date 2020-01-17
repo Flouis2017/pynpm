@@ -54,17 +54,30 @@ fig = ax.get_figure()
 fig.savefig("LR_Foot.png")
 """
 
+"""
+# 根据球员平均评分，统计大于等于20人的前10名俱乐部/国家
+g = data.groupby('Club')
+# g = data.groupby('Nationality')
+v = g['Rating'].agg(['mean', 'count'])  # agg() 按照什么维度进行统计
+v = v[v['count'] >= 20].sort_values('mean', ascending=False).head(10)
+print(v)
+ax = v.plot(kind='bar')
+plt.legend(labels=['评分', '人数'])
+plt.show()
+"""
 
-
-
-
-
-
-
-
-
-
-
+"""
+# 统计拥有忠心（五年及以上）球员的前十个俱乐部
+year = data['Club_Joining'].apply(lambda x: x.split('/')[-1]).astype(np.int)
+# print(year)
+# 用获取数据集年份 和 年份数据 做差，筛选出五年以上且不是“自由身”的球员
+g = data[(2017 - year >= 5) & (data['Club'] != 'Free Agents')]
+# 根据俱乐部进行分组合计
+g = g.groupby('Club').size().sort_values(ascending=False).head(10)
+print(g)
+p = g.plot(kind='bar')
+plt.show()
+"""
 
 
 
